@@ -1,4 +1,4 @@
-package com.leetcode.solutions.checked.discussion;
+package com.leetcode.solutions.discussions;
 
 /**
  * Note: This is an extension of House Robber.

@@ -1,4 +1,4 @@
-package com.leetcode.solutions.checked.discussion;
+package com.leetcode.solutions.discussions;
 
 /**
  * Given a binary tree, determine if it is height-balanced.

@@ -1,4 +1,4 @@
-package com.leetcode.solutions.checked.discussion;
+package com.leetcode.solutions.discussions;
 
 public class C88 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {

@@ -1,4 +1,4 @@
-package com.leetcode.solutions.checked.discussion;
+package com.leetcode.solutions.discussions;
 
 import java.util.ArrayList;
 import java.util.Arrays;

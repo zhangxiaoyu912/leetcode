@@ -1,4 +1,4 @@
-package com.leetcode.solutions.checked.discussion;
+package com.leetcode.solutions.discussions;
 
 public class C79 {
     // below is the solution, it is tricky to use the # to mark and unmark
