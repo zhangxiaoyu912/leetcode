@@ -70,7 +70,7 @@ public class C16 {
                 if (Math.abs(sum - target) < Math.abs(closest - target))
                     closest = sum;
 
-                // here is the tricky part
+                // here is the tricky part, but similar to C15
                 if (sum > target)
                     k--;
                 else

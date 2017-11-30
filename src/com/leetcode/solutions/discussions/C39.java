@@ -21,6 +21,9 @@ import java.util.List;
  */
 
 public class C39 {
+
+    // it is different from 3SUM or 4SUM since it will allow same number reused multiple times
+    // hence the time complexity will be much higher
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> list = new ArrayList<>();
         if (candidates == null || candidates.length == 0)
@@ -46,6 +49,7 @@ public class C39 {
                 return;
 
             current.add(candidates[i]);
+            // TRICK: pass 'i' instead of 'i + 1' here will make sure same number can be re-used multiple times
             combinationSum(candidates, target - candidates[i], i, current, list);
             current.remove(current.size() - 1);
         }

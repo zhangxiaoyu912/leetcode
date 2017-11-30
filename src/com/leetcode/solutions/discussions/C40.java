@@ -47,8 +47,11 @@ public class C40 {
         for (int i = j; i< candidates.length; i ++) {
             if (candidates[i] > target)
                 return;
+
+            // the if condition also prevent duplicate
             if (prev != candidates[i]) {
                 current.add(candidates[i]);
+                // pass 'i + 1' instead of 'i' will prevent duplicate
                 combinationSum(candidates, target - candidates[i], i + 1, current, list);
                 current.remove(current.size() - 1);
                 prev = candidates[i];

@@ -22,9 +22,12 @@ public class C46 {
             result.add(temp);
             return;
         } else {
+            // the tricky part is here
+            // j++, hence for each i and j combination, there will be continue 'i + 1' to exhaust all combinations
             for (int j = i; j < nums.length; j ++) {
                 swap(nums, i, j);
                 helper(nums, i + 1, result);
+                // swap back to try other combinations
                 swap(nums, i, j);
             }
         }

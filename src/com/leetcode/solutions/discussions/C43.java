@@ -1,6 +1,9 @@
 package com.leetcode.solutions.discussions;
 
 public class C43 {
+
+    // about corner case : '0', leading '0'
+    // logic->code skill
     public String multiply(String num1, String num2) {
         if (num1 == null || num2 == null || num1.length() == 0 || num2.length() == 0)
             return "";

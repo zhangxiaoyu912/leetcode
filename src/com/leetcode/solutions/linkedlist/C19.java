@@ -1,4 +1,4 @@
-package com.leetcode.solutions.classic;
+package com.leetcode.solutions.linkedlist;
 
 public class C19 {
     static public class ListNode {
@@ -19,7 +19,8 @@ public class C19 {
 
         ListNode slow = dummy;
         ListNode fast = dummy;
-        for(int i=1; i<=n+1; i++) {
+        // almost the only tricky part is measure this position correctly
+        for(int i=0; i<=n; i++) {
             fast = fast.next;
         }
 

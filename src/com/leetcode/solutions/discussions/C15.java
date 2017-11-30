@@ -2,11 +2,7 @@ package com.leetcode.solutions.discussions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public class C15 {
 
@@ -45,8 +41,10 @@ public class C15 {
                         while(j<k && nums[k]==nums[k+1])
                             k--;
 
+                        // < 0 means the result needs to be bigger, hence j++
                     }else if(nums[i]+nums[j]+nums[k]<0){
                         j++;
+                        // otherwise it is > 0, means the results needs to be smaller, hence k--
                     }else{
                         k--;
                     }

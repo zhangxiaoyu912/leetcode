@@ -16,6 +16,7 @@ public class C34 {
         if (nums[high] == target)
             return getRange(nums, high, target);
 
+        // the low < high - 1 is the correct condition for BS
         while (low < high - 1) {
             int mid = (low + high) / 2;
             if (nums[mid] < target)
@@ -29,6 +30,7 @@ public class C34 {
         return invalid;
     }
 
+    // be careful about the boundary conditions
     private int[] getRange(int[] nums, int mid, int target) {
         int left = mid;
         int right = mid;
