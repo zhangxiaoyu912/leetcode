@@ -12,6 +12,7 @@ public class C67 {
 
         StringBuilder builder = new StringBuilder();
         int carry = 0;
+        // think about why there will be case of 0, 1, 2, 3
         while (ia >= 0 || ib >= 0) {
             int numA = ia >= 0 ? Integer.parseInt("" + a.charAt(ia)) : 0;
             int numB = ib >= 0 ? Integer.parseInt("" + b.charAt(ib)) : 0;

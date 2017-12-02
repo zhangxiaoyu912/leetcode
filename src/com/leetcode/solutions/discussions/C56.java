@@ -39,6 +39,8 @@ public class C56 {
         });
 
         Interval prev = intervals.get(0);
+        // if no overlap, add prev into the list
+        // if overlap, merge and update prev
         for (int i = 1; i < intervals.size(); i ++) {
             if (prev.end < intervals.get(i).start) {
                 result.add(prev);

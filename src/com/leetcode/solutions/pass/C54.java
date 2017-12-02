@@ -9,6 +9,7 @@ public class C54 {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0)
             return list;
 
+        // always get those into a var, make the code neat
         int xL = 0;
         int xR = matrix.length - 1;
         int yL = 0;
@@ -22,6 +23,7 @@ public class C54 {
         if (xL > xR && yL > yR)
             return;
 
+        // cases : single dot, single row, single column, in between
         if (xL == xR && yL == yR) {
             list.add(matrix[xL][yL]);
         } else if (xL < xR && yL < yR) {

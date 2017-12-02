@@ -1,4 +1,4 @@
-package com.leetcode.solutions.pass;
+package com.leetcode.solutions.linkedlist;
 
 public class C83 {
     static public class ListNode {

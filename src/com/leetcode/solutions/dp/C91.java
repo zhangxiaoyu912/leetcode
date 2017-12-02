@@ -1,9 +1,9 @@
-package com.leetcode.solutions;
+package com.leetcode.solutions.dp;
 
 public class C91 {
 
-    // the DP direction is right, it just just doesn't need to have more than one element array to memorize
 
+    // DP
     // the more important is when the solution is not neat enough, think about not keep patching it but step backward
     // and polish the foundation
     // the correct solution also scan from left to right instead of from right to left because anything start with 0

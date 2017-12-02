@@ -5,6 +5,10 @@ public class C88 {
         if (nums1 == null || nums2 == null)
             return;
 
+        // the only part is fill num1 from back to front hence it will be like a merge sort in place
+        // also when merge finish for first while loop, there is only possible that num2 has unprocessed left
+        // because if num2 are all process and part of num1 is not processed, merge is finished already ! since
+        // results hold in num1
         while (m > 0 && n > 0) {
             if (nums1[m - 1] > nums2[n - 1]) {
                 nums1[m + n - 1] = nums1[m - 1];

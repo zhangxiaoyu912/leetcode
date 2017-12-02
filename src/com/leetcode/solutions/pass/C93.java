@@ -31,11 +31,15 @@ public class C93 {
         } else {
             for (int j = i + 1; j <= s.length(); j ++) {
                 String str = s.substring(i, j);
-                if (valid(str)) {
+                if (valid(str)) {// if not valid, this j is invalid, continue
                     list.add(str);
                     helper(result, list, s, j);
                     list.remove(list.size() - 1);
                 }
+                // but if str > 255, increase j will waste of resource, should bail out earlier
+                long num = Long.parseLong(str);
+                if (num > 255)
+                    break;
             }
         }
     }

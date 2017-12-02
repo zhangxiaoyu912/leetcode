@@ -2,26 +2,27 @@ package com.leetcode.solutions.discussions;
 
 public class C79 {
     // below is the solution, it is tricky to use the # to mark and unmark
+    // there are several other problems, for in place algorithm, mark and unmark with # can be a solution
     public boolean exist(char[][] board, String word) {
         int m = board.length;
         int n = board[0].length;
 
-        boolean result = false;
         for(int i=0; i<m; i++){
             for(int j=0; j<n; j++){
-                if(dfs(board,word,i,j,0)){
-                    result = true;
-                }
+                if(dfs(board,word,i,j,0))
+                    return true;
             }
         }
 
-        return result;
+        return false;
     }
 
     public boolean dfs(char[][] board, String word, int i, int j, int k){
         int m = board.length;
         int n = board[0].length;
 
+        // this check is good so that the recursive call don't have to check it before calling
+        // hence less code
         if(i<0 || j<0 || i>=m || j>=n){
             return false;
         }

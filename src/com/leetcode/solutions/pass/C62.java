@@ -1,6 +1,9 @@
 package com.leetcode.solutions.pass;
 
 public class C62 {
+
+    // kind of using the DP idea, marking the step from destination to source
+    // maybe a better way to do it is put the mark in place !
     public int uniquePaths(int m, int n) {
         int[][] matrix = new int[m][n];
         for (int i = 0; i < m; i ++)

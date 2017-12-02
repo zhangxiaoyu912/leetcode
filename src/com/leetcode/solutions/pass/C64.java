@@ -1,6 +1,8 @@
 package com.leetcode.solutions.pass;
 
 public class C64 {
+    // similar as 62, 63, mark the cost from destination to source
+    // a better improvement might be mark it in place of 'grid'
     public int minPathSum(int[][] grid) {
         if (grid == null || grid[0].length == 0)
             return 0;

@@ -1,4 +1,4 @@
-package com.leetcode.solutions.discussions;
+package com.leetcode.solutions.linkedlist;
 
 public class C92 {
     static public class ListNode {
@@ -31,7 +31,7 @@ public class C92 {
 
             if(i==n){
                 second.next = p.next;
-                p.next = null;
+                p.next = null;// break condition
             }
 
             p= p.next;

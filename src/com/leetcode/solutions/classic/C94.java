@@ -15,6 +15,8 @@ public class C94 {
         }
     }
 
+    // check all 4 solutions:
+    // https://www.programcreek.com/2012/12/leetcode-solution-of-binary-tree-inorder-traversal-in-java/
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         if (root == null)
