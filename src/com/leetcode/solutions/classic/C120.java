@@ -1,4 +1,4 @@
-package com.leetcode.solutions.discussions;
+package com.leetcode.solutions.classic;
 
 import java.util.List;
 
@@ -20,6 +20,7 @@ import java.util.List;
 public class C120 {
 
     // this has to be a bottom up solution, due to the nature of the problem
+    // if possible, modify the input so that have a in place solution
     public int minimumTotal(List<List<Integer>> triangle) {
         int[] total = new int[triangle.get(triangle.size() - 1).size()];
 

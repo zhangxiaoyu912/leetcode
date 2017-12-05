@@ -33,56 +33,81 @@ public class C129 {
         }
     }
 
+    // much neat code by classic structure
     public int sumNumbers(TreeNode root) {
-        if (root == null)
+        if(root == null)
             return 0;
 
-        if (root.left == null && root.right == null)
-            return root.val;
+        return dfs(root, 0, 0);
+    }
 
-        int sum = 0;
-        Stack<TreeNode> stack = new Stack<>();
-        List<TreeNode> list = new ArrayList<>();
-        stack.push(root);
-        while(!stack.isEmpty()) {
-            TreeNode node = stack.pop();
+    public int dfs(TreeNode node, int num, int sum){
+        if(node == null) return sum;
 
-            if (!list.isEmpty()) {
-                for (int i = list.size() - 1; i >= 0; i --) {
-                    if (isParent(list.get(i), node))
-                        break;
-                    else
-                        list.remove(i);
-                }
-            }
+        num = num*10 + node.val;
 
-            if (isLeaf(node)) {
-                int temp = 0;
-                for (TreeNode tempNode: list) {
-                    temp = temp * 10 + tempNode.val;
-                }
-                temp = temp * 10 + node.val;
-                sum += temp;
-            } else {
-                list.add(node);
-            }
-
-            if (node.right != null)
-                stack.push(node.right);
-            if (node.left != null)
-                stack.push(node.left);
+        // leaf
+        if(node.left == null && node.right == null) {
+            sum += num;
+            return sum;
         }
 
+        // left subtree + right subtree
+        sum = dfs(node.left, num, sum) + dfs(node.right, num, sum);
         return sum;
     }
 
-    private boolean isLeaf(TreeNode node) {
-        return node.left == null && node.right == null;
-    }
-
-    private boolean isParent(TreeNode node1, TreeNode node2) {
-        return node1.left == node2 || node1.right == node2;
-    }
+    // my solution, also works
+//    public int sumNumbers(TreeNode root) {
+//        if (root == null)
+//            return 0;
+//
+//        if (root.left == null && root.right == null)
+//            return root.val;
+//
+//        int sum = 0;
+//        Stack<TreeNode> stack = new Stack<>();
+//        List<TreeNode> list = new ArrayList<>();
+//        stack.push(root);
+//        while(!stack.isEmpty()) {
+//            TreeNode node = stack.pop();
+//
+//            if (!list.isEmpty()) {
+//                for (int i = list.size() - 1; i >= 0; i --) {
+//                    if (isParent(list.get(i), node))
+//                        break;
+//                    else
+//                        list.remove(i);
+//                }
+//            }
+//
+//            if (isLeaf(node)) {
+//                int temp = 0;
+//                for (TreeNode tempNode: list) {
+//                    temp = temp * 10 + tempNode.val;
+//                }
+//                temp = temp * 10 + node.val;
+//                sum += temp;
+//            } else {
+//                list.add(node);
+//            }
+//
+//            if (node.right != null)
+//                stack.push(node.right);
+//            if (node.left != null)
+//                stack.push(node.left);
+//        }
+//
+//        return sum;
+//    }
+//
+//    private boolean isLeaf(TreeNode node) {
+//        return node.left == null && node.right == null;
+//    }
+//
+//    private boolean isParent(TreeNode node1, TreeNode node2) {
+//        return node1.left == node2 || node1.right == node2;
+//    }
 
     public static void main(String[] strings) {
         C129 c = new C129();

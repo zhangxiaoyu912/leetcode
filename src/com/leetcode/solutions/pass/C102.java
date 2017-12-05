@@ -31,6 +31,8 @@ public class C102 {
         }
     }
 
+    // change list to queue will be better, for each level holding
+    // so there will be only two queues, one of entire traverse, one for each level
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> results = new ArrayList<>();
         Queue<TreeNode> queue = new ArrayDeque<>();

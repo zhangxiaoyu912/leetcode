@@ -1,4 +1,4 @@
-package com.leetcode.solutions.discussions;
+package com.leetcode.solutions.classic;
 
 /**
  *
@@ -39,6 +39,8 @@ public class C101 {
         return isSymmetric(root.left, root.right);
     }
 
+    // this is also a format of similar problems
+    // the value comparision is the key, if one of null and another is not, value will not be equal
     public boolean isSymmetric(TreeNode l, TreeNode r) {
         if (l == null && r == null) {
             return true;

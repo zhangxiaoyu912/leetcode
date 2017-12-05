@@ -34,12 +34,15 @@ public class C110 {
         int left = getHeight(node.left);
         int right = getHeight(node.right);
 
+        // valid the height diff (1 at most)
         if (Math.abs(left - right) > 1)
             return -1;
 
+        // if left or right is not balanced, then whole tree is not balanced
         if (left == -1 || right == -1)
             return -1;
 
+        // regular way to calculate height
         return 1 + Math.max(left, right);
     }
 

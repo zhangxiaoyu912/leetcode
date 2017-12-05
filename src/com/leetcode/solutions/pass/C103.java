@@ -31,6 +31,7 @@ public class C103 {
         }
     }
 
+    // using queue for each level nodes holding should be better than using list
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> results = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();

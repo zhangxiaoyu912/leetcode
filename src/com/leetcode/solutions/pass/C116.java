@@ -46,6 +46,7 @@ public class C116 {
         }
     }
 
+    // can also use a queue instead of list to hold each level
     public void connect(TreeLinkNode root) {
         if (root == null)
             return;
