@@ -18,6 +18,8 @@ public class C213 {
         if (nums.length == 1)
             return nums[0];
 
+        // this way avoid dealing with 'rotating' logic, but only compare two number
+        // loop twice might be just OK
         int max1 = 0;
         int max2 = 0;
 

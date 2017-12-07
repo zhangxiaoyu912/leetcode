@@ -19,6 +19,7 @@ public class C179 {
      * 2. problem can be much simpler by another angle
      */
 
+    // sorting works since if the case works for nums with size==2, then it will work for 3, and so on
     public String largestNumber(int[] nums) {
         String[] array = new String[nums.length];
         for (int i = 0; i < nums.length; i ++)

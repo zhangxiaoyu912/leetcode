@@ -44,6 +44,8 @@ public class C156 {
         }
     }
 
+    // interactive solution is better and not hard to understand
+    // just move from top to bottom, and since right child will be simple, so no special logic to handle it
     public TreeNode upsideDownBinaryTree(TreeNode root) {
         if (root == null)
             return null;
@@ -52,7 +54,7 @@ public class C156 {
         TreeNode parent = null;
         TreeNode right = null;
         while (node.left != null) {
-            // this solution is tricky
+            // this solution is tricky, but just rotation
             TreeNode left = node.left;
             node.left = right;
             right = node.right;

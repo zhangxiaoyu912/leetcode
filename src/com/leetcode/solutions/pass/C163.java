@@ -10,6 +10,9 @@ import java.util.List;
  */
 
 public class C163 {
+
+    // Actually, I think it’s good to always keep in mind about Integer overflow when you are adding a Integer.
+
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         List<String> list = new ArrayList<>();
 

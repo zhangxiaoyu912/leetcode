@@ -19,6 +19,8 @@ import java.util.Set;
  */
 
 public class C187 {
+
+    // the length is fixed 10 makes it easy
     public List<String> findRepeatedDnaSequences(String s) {
         Set<String> list = new HashSet<>();
         Set<String> set = new HashSet<>();

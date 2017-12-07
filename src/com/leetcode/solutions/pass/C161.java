@@ -31,10 +31,23 @@ public class C161 {
                     is += 1;
                     it += 1;
                 }
+                // this entire else block can be replaced by
+//                if(s.length() > t.length()){
+//                    is ++;
+//                }else if(s.length() < t.length()){
+//                    it ++;
+//                }else{
+//                    is ++;
+//                    it ++;
+//                }
             }
         }
 
         diff += Math.abs((s.length() - is) - (t.length() - it));
+        // can be replaced by
+//        if(is < s.length() || it < t.length()){
+//            diff ++;
+//        }
 
         if (diff == 1)
             return true;
