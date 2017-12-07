@@ -5,7 +5,7 @@ import java.util.List;
 
 public class C140 {
 
-    // this is the DP solution
+    // this is the DP solution, similar as C139 but enhance which by changing boolean[] to List<String>[]
     // the second version of solution is available at https://www.programcreek.com/2014/03/leetcode-word-break-ii-java/
     public List<String> wordBreak(String s, List<String> wordDict) {
         if (s == null || s.length() == 0)

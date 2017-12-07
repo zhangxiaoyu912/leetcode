@@ -1,4 +1,4 @@
-package com.leetcode.solutions.classic;
+package com.leetcode.solutions.linkedlist;
 
 /**
  * Given a singly linked list L: L0?L1?…?Ln-1?Ln,
@@ -27,15 +27,15 @@ public class C143 {
         // split
         ListNode slow = head;
         ListNode fast = head;
-        // this line is tricky !!!
+        // this line is important to make sure fast traverse twice speed as slow
         while (fast != null && fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
+        // reverse : this is very important
         ListNode second = slow.next;
         slow.next = null;
-        // reverse : this is very important
         ListNode prev = null;
         ListNode current = second;
         ListNode next = null;

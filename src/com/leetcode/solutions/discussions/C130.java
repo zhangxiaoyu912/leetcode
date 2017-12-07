@@ -20,6 +20,10 @@ package com.leetcode.solutions.discussions;
 
 public class C130 {
 
+    // it is a graph DFS
+    // but the tricky parts of similar problems :
+    //          1. in place algo may need to mark to '#' instead of 'O' or 'X'
+    //          2. some problem need to process edge first
     public void solve(char[][] board) {
         if (board == null || board.length < 3 || board[0].length < 3 )
             return;

@@ -1,8 +1,4 @@
-package com.leetcode.solutions.pass;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+package com.leetcode.solutions.classic;
 
 /**
  * Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.
@@ -33,6 +29,7 @@ public class C129 {
         }
     }
 
+    // solution 1
     // much neat code by classic structure
     public int sumNumbers(TreeNode root) {
         if(root == null)
@@ -56,6 +53,51 @@ public class C129 {
         sum = dfs(node.left, num, sum) + dfs(node.right, num, sum);
         return sum;
     }
+
+    // solution 2
+    // DFS solution which put all the DFS paths into a list, each path start with root, sum the total
+//    public int sumNumbers(TreeNode root) {
+//        int result = 0;
+//        if(root==null)
+//            return result;
+//
+//        ArrayList<ArrayList<TreeNode>> all = new ArrayList<ArrayList<TreeNode>>();
+//        ArrayList<TreeNode> l = new ArrayList<TreeNode>();
+//        l.add(root);
+//        dfs(root, l, all);
+//
+//        for(ArrayList<TreeNode> a: all){
+//            StringBuilder sb = new StringBuilder();
+//            for(TreeNode n: a){
+//                sb.append(String.valueOf(n.val));
+//            }
+//            int currValue = Integer.valueOf(sb.toString());
+//            result = result + currValue;
+//        }
+//
+//        return result;
+//    }
+//
+//    public void dfs(TreeNode n, ArrayList<TreeNode> l,  ArrayList<ArrayList<TreeNode>> all){
+//        if(n.left==null && n.right==null){
+//            ArrayList<TreeNode> t = new ArrayList<TreeNode>();
+//            t.addAll(l);
+//            all.add(t);
+//        }
+//
+//        if(n.left!=null){
+//            l.add(n.left);
+//            dfs(n.left, l, all);
+//            l.remove(l.size()-1);
+//        }
+//
+//        if(n.right!=null){
+//            l.add(n.right);
+//            dfs(n.right, l, all);
+//            l.remove(l.size()-1);
+//        }
+//
+//    }
 
     // my solution, also works
 //    public int sumNumbers(TreeNode root) {

@@ -69,7 +69,7 @@ public class C139 {
         return t[s.length()];
     }
 
-    // another more simple and time friendly solution, O(n)
+    // another more simple and time friendly solution
     public boolean wordBreak(String s, Set<String> wordDict) {
         int[] pos = new int[s.length()+1];
 

@@ -19,6 +19,7 @@ public class C138 {
         }
     }
 
+    // the random pointer might not has been visited, hence
     public RandomListNode copyRandomList(RandomListNode head) {
         if (head == null)
             return null;
