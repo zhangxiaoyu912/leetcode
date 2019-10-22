@@ -9,6 +9,11 @@ public class C22_generate_parentheses {
         dfs(result, "", n, n);
         return result;
     }
+
+    /*
+     * although it looks like a string permutation problem, it is actually can be treated as graph DFS traverse problem
+     */
+
     /*
     left and right represents the remaining number of ( and ) that need to be added.
     When left > right, there are more ")" placed than "(". Such cases are wrong and the method stops.

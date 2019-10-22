@@ -22,7 +22,7 @@ import java.util.List;
  ]
  */
 
-public class C40 {
+public class C40_combination_sum_2 {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> list = new ArrayList<>();
         if (candidates == null || candidates.length == 0)
@@ -60,7 +60,7 @@ public class C40 {
     }
 
     public static void main(String[] strings) {
-        C40 c = new C40();
+        C40_combination_sum_2 c = new C40_combination_sum_2();
         int[] candidates = new int[]{10, 1, 2, 7, 6, 1, 5};
         List<List<Integer>> lists = c.combinationSum2(candidates, 8);
         for (List<Integer> list : lists) {

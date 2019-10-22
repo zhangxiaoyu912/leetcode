@@ -1,6 +1,6 @@
 package com.leetcode.solutions.discussions;
 
-public class C88 {
+public class C88_merge_sorted_array {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         if (nums1 == null || nums2 == null)
             return;
@@ -26,7 +26,7 @@ public class C88 {
     }
 
     public static void main(String[] strings) {
-        C88 c = new C88();
+        C88_merge_sorted_array c = new C88_merge_sorted_array();
         int[] num1 = new int[]{4,5,6,0,0,0};
         int[] num2 = new int[]{1,2,3};
         c.merge(num1, 3, num2, 3);

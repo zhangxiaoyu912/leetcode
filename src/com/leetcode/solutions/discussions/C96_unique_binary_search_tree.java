@@ -1,6 +1,6 @@
 package com.leetcode.solutions.discussions;
 
-public class C96 {
+public class C96_unique_binary_search_tree {
 
     // think the the left tree and right tree 's shape will change independently, hence it will the sum of them
     public int numTrees(int n) {

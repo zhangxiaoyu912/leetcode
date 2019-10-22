@@ -8,7 +8,7 @@ import java.util.Map;
 
  Return a deep copy of the list.
  */
-public class C138 {
+public class C138_copy_list_random_pointer {
 
     class RandomListNode {
         int label;

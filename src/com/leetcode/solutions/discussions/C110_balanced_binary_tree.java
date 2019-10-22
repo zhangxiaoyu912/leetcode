@@ -6,7 +6,7 @@ package com.leetcode.solutions.discussions;
  For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
  */
 
-public class C110 {
+public class C110_balanced_binary_tree {
     static public class TreeNode {
         int val;
         TreeNode left;
@@ -47,9 +47,9 @@ public class C110 {
     }
 
     public static void main(String[] strings) {
-        C110 c = new C110();
-        TreeNode root = new C110.TreeNode(1);
-        root.right = new C110.TreeNode(2);
+        C110_balanced_binary_tree c = new C110_balanced_binary_tree();
+        TreeNode root = new C110_balanced_binary_tree.TreeNode(1);
+        root.right = new C110_balanced_binary_tree.TreeNode(2);
         root.right.right = new TreeNode(3);
         System.out.println(c.isBalanced(root));
     }

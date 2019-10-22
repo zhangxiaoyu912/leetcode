@@ -3,7 +3,7 @@ package com.leetcode.solutions.discussions;
 import java.util.HashMap;
 import java.util.Map;
 
-public class C1 {
+public class C1_2_sum {
 
     // this solution is good since it only loop once
     // it will avoid the case duplicate number like [3, 3] with sum is 6

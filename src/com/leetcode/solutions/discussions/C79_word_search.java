@@ -1,6 +1,6 @@
 package com.leetcode.solutions.discussions;
 
-public class C79 {
+public class C79_word_search {
     // below is the solution, it is tricky to use the # to mark and unmark
     // there are several other problems, for in place algorithm, mark and unmark with # can be a solution
     public boolean exist(char[][] board, String word) {
@@ -119,7 +119,7 @@ public class C79 {
 //    }
 
     public static void main(String[] strings) {
-        C79 c = new C79();
+        C79_word_search c = new C79_word_search();
         char[] char1 = new char[]{'A', 'B', 'C', 'E'};
         char[] char2 = new char[]{'S', 'F', 'E', 'S'};
         char[] char3 = new char[]{'A', 'D', 'E', 'E'};

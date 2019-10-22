@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class C56 {
+public class C56_merge_intervals {
     public class Interval {
         int start;
         int end;

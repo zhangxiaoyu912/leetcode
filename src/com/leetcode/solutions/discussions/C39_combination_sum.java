@@ -20,7 +20,7 @@ import java.util.List;
  ]
  */
 
-public class C39 {
+public class C39_combination_sum {
 
     // it is different from 3SUM or 4SUM since it will allow same number reused multiple times
     // hence the time complexity will be much higher
@@ -56,7 +56,7 @@ public class C39 {
     }
 
     public static void main(String[] strings) {
-        C39 c = new C39();
+        C39_combination_sum c = new C39_combination_sum();
         int[] candidates = new int[]{2, 3, 6, 7};
         List<List<Integer>> lists = c.combinationSum(candidates, 7);
         for (List<Integer> list : lists) {

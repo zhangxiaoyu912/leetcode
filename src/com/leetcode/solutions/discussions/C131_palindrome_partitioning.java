@@ -3,7 +3,7 @@ package com.leetcode.solutions.discussions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class C131 {
+public class C131_palindrome_partitioning {
 
     // the DP solution is available in https://www.programcreek.com/2013/03/leetcode-palindrome-partitioning-java/
     // the DP solution also have Time O(n^2) Space O(n^2)
@@ -120,7 +120,7 @@ public class C131 {
 //    }
 
     public static void main(String[] strings) {
-        C131 c = new C131();
+        C131_palindrome_partitioning c = new C131_palindrome_partitioning();
         List<List<String>> lists = c.partition("cdd");
         for (List<String> list : lists) {
             System.out.println("==============");

@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class C18 {
+// it is basically a brute force solution optimization. HashMap cannot help at this point.
+// In nature it is brute force, but sorting first make it a better, plus
+// it is easier to handle duplicate after sorting, then 5Sum, 6Sum are all possible, similar idea
+public class C18_4_sum {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<>();
 
@@ -61,7 +64,7 @@ public class C18 {
     }
 
     public static void main(String[] strings) {
-        C18 c = new C18();
+        C18_4_sum c = new C18_4_sum();
         System.out.println(c.fourSum(new int[]{-1,0,1,2,-1,-4}, -1));
     }
 }

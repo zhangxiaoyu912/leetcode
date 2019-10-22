@@ -2,7 +2,7 @@ package com.leetcode.solutions.discussions;
 
 import java.util.Arrays;
 
-public class C16 {
+public class C16_3_sum_closest {
 
     // this solution exceed the time limit
 //    public int threeSumClosest(int[] nums, int target) {
@@ -82,7 +82,7 @@ public class C16 {
     }
 
     public static void main(String[] strings) {
-        C16 c = new C16();
+        C16_3_sum_closest c = new C16_3_sum_closest();
         System.out.println(c.threeSumClosest(new int[]{1,2,4,8,16,32,64,128}, 82));
     }
 }

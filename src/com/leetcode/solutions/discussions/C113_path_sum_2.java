@@ -21,7 +21,7 @@ import java.util.List;
  [5,8,4,5]
  ]
  */
-public class C113 {
+public class C113_path_sum_2 {
 
     static public class TreeNode {
         int val;
@@ -70,17 +70,17 @@ public class C113 {
     }
 
     public static void main(String[] strings) {
-        C113 c = new C113();
-        C113.TreeNode node = new C113.TreeNode(5);
-        node.left = new C113.TreeNode(4);
-        node.right = new C113.TreeNode(8);
-        node.left.left = new C113.TreeNode(11);
-        node.left.left.left = new C113.TreeNode(7);
-        node.left.left.right = new C113.TreeNode(2);
-        node.right.left = new C113.TreeNode(13);
-        node.right.right = new C113.TreeNode(4);
-        node.right.right.right = new C113.TreeNode(1);
-        node.right.right.left = new C113.TreeNode(5);
+        C113_path_sum_2 c = new C113_path_sum_2();
+        C113_path_sum_2.TreeNode node = new C113_path_sum_2.TreeNode(5);
+        node.left = new C113_path_sum_2.TreeNode(4);
+        node.right = new C113_path_sum_2.TreeNode(8);
+        node.left.left = new C113_path_sum_2.TreeNode(11);
+        node.left.left.left = new C113_path_sum_2.TreeNode(7);
+        node.left.left.right = new C113_path_sum_2.TreeNode(2);
+        node.right.left = new C113_path_sum_2.TreeNode(13);
+        node.right.right = new C113_path_sum_2.TreeNode(4);
+        node.right.right.right = new C113_path_sum_2.TreeNode(1);
+        node.right.right.left = new C113_path_sum_2.TreeNode(5);
         List<List<Integer>> list = c.pathSum(node, 22);
         for (List<Integer> level : list) {
             System.out.println("==============");

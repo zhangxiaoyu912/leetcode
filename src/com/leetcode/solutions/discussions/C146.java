@@ -75,19 +75,6 @@ public class C146 {
             move_to_tail(current);
 
             return map.get(key).value;
-
-//            Node node = map.get(key);
-//            if (tail != node) {
-//                tail.next = node;
-//                node.prev = tail;
-//                if (node.prev != null)
-//                    node.prev.next = node.next;
-//                if (node == head)
-//                    head = tail;
-//                tail = node;
-//            }
-//
-//            return node.value;
         }
 
         // put will call get !!
@@ -108,28 +95,6 @@ public class C146 {
             Node insert = new Node(key, value);
             map.put(key, insert);
             move_to_tail(insert);
-//            Node node = new Node(key, value);
-//            map.put(key, node);
-//
-//            if (head.key == -1 && tail.key == -1) {
-//                head = node;
-//                tail = node;
-//                head.next = tail;
-//                tail.prev = head;
-//            } else if (head.key == tail.key) {
-//                tail = node;
-//                tail.prev = head;
-//            } else {
-//                tail.next = node;
-//                node.prev = tail;
-//                tail = node;
-//            }
-//
-//            if (map.keySet().size() > capacity) {
-//                Node currHead = head.next;
-//                map.remove(head.key);
-//                head = currHead;
-//            }
         }
 
         private void move_to_tail(Node current) {

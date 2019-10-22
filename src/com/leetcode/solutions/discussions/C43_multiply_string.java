@@ -1,6 +1,6 @@
 package com.leetcode.solutions.discussions;
 
-public class C43 {
+public class C43_multiply_string {
 
     // about corner case : '0', leading '0'
     // logic->code skill
@@ -54,7 +54,7 @@ public class C43 {
     }
 
     public static void main(String[] strings) {
-        C43 c = new C43();
+        C43_multiply_string c = new C43_multiply_string();
         System.out.println(c.multiply("123", "456"));
     }
 }

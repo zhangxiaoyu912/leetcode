@@ -31,7 +31,7 @@ public class C211 {
         class TrieNode {
             char c;
             boolean isLeaf;
-            Map<Character, TrieNode> childrean = new HashMap<>();
+            Map<Character, TrieNode> childrean = new HashMap<>();// finish the empty list ini outside of constructor
             public TrieNode(){}
             public TrieNode(char c) {
                 this.c = c;

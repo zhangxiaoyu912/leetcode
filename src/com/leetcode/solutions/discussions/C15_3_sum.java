@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class C15 {
+public class C15_3_sum {
 
     // this solution doesn't have much overlap with 'Two Sum', but it
     // 1. sort the array first
