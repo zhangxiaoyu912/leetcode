@@ -14,7 +14,7 @@ import java.util.HashMap;
  * Given numerator = 2, denominator = 3, return "0.(6)".
  */
 
-public class C166 {
+public class C166_fraction_to_recurring_decimal {
 
     public String fractionToDecimal(int numerator, int denominator) {
         if (numerator == 0)
@@ -74,7 +74,7 @@ public class C166 {
     }
 
     public static void main(String[] str) {
-        C166 c = new C166();
+        C166_fraction_to_recurring_decimal c = new C166_fraction_to_recurring_decimal();
         System.out.println(c.fractionToDecimal(1, 99));
     }
 }

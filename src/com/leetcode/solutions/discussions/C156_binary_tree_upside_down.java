@@ -32,7 +32,7 @@ package com.leetcode.solutions.discussions;
  5
  The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
  */
-public class C156 {
+public class C156_binary_tree_upside_down {
 
     public class TreeNode {
         int val;

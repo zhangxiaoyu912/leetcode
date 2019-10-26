@@ -11,7 +11,7 @@ import java.util.Comparator;
  Note: The result may be very large, so you need to return a string instead of an integer.
  */
 
-public class C179 {
+public class C179_largest_number {
 
     /**
      * this problem needs some out of box thinking :
@@ -45,7 +45,7 @@ public class C179 {
     }
 
     public static void main(String[] strs) {
-        C179 c = new C179();
+        C179_largest_number c = new C179_largest_number();
         int[] nums = new int[]{0, 0, 0};
         System.out.println(c.largestNumber(nums));
     }

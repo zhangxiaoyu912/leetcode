@@ -10,7 +10,7 @@ package com.leetcode.solutions.discussions;
 
  */
 
-public class C213 {
+public class C213_house_robber_2 {
     public int rob(int[] nums) {
         if (nums == null || nums.length == 0)
             return 0;
@@ -55,7 +55,7 @@ public class C213 {
     }
 
     public static void main(String[] strings) {
-        C213 c = new C213();
+        C213_house_robber_2 c = new C213_house_robber_2();
         System.out.println(c.rob(new int[]{1}));
     }
 }

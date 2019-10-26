@@ -9,7 +9,7 @@ package com.leetcode.solutions.discussions;
  Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
  */
 
-public class C189 {
+public class C189_rotate_array {
     public void rotate(int[] nums, int k) {
         if (nums == null || nums.length == 0 || nums.length == 1 || k == 0)
             return;
@@ -35,7 +35,7 @@ public class C189 {
     }
 
     private void reverseIntArray(int[] nums, int b, int e) {
-        while (b < e) {// !!! this is not b != e or others
+        while (b < e) {
             int temp = nums[b];
             nums[b] = nums[e];
             nums[e] = temp;
@@ -45,7 +45,7 @@ public class C189 {
     }
 
     public static void main(String[] strings) {
-        C189 c = new C189();
+        C189_rotate_array c = new C189_rotate_array();
         int[] nums = new int[]{1, 2};
         c.rotate(nums, 1);
         for (int num : nums)

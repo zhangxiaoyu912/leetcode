@@ -6,7 +6,7 @@ package com.leetcode.solutions.discussions;
  For example, given the range [5, 7], you should return 4.
  */
 
-public class C201 {
+public class C201_Bitwise_AND_of_Numbers_Range {
     public int rangeBitwiseAnd(int m, int n) {
 
         // this exceed time limitation
@@ -24,7 +24,7 @@ public class C201 {
     }
 
     public static void main(String[] strings) {
-        C201 c = new C201();
+        C201_Bitwise_AND_of_Numbers_Range c = new C201_Bitwise_AND_of_Numbers_Range();
         System.out.println(c.rangeBitwiseAnd(5, 2));
     }
 }

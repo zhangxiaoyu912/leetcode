@@ -27,7 +27,7 @@ import java.util.Map;
         cache.get(4);       // returns 4
  */
 
-public class C146 {
+public class C146_LRUCache {
 
     static class LRUCache {
 
@@ -106,7 +106,7 @@ public class C146 {
     }
 
     public static void main(String[] strs) {
-        LRUCache cache = new C146.LRUCache(2);
+        LRUCache cache = new C146_LRUCache.LRUCache(2);
         cache.put(1, 1);
         cache.put(2, 2);
         System.out.println(cache.get(1));

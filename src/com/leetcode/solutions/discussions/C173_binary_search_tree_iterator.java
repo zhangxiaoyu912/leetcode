@@ -10,7 +10,7 @@ import java.util.Stack;
  Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
  */
 
-public class C173 {
+public class C173_binary_search_tree_iterator {
 
     public class TreeNode {
         int val;
@@ -61,7 +61,7 @@ public class C173 {
     }
 
     public static void main(String[] strs) {
-        BSTIterator c = new C173.BSTIterator(null);
+        BSTIterator c = new C173_binary_search_tree_iterator.BSTIterator(null);
         System.out.println(c.next());
     }
 }
