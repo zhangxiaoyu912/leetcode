@@ -3,6 +3,8 @@ package com.leetcode.solutions.pass;
 import java.util.HashMap;
 import java.util.Map;
 
+// fixme: something found by doing it again manually:
+// fixme: class Trie and class TrieNode are separate thing, hence root only exist in Trie, only childrean need to carry over in the for loop
 public class C208_Implement_Trie {
     class Trie {
 

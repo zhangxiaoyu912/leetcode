@@ -1,6 +1,6 @@
 package com.leetcode.solutions.pass;
 
-public class C62 {
+public class C62_unique_path {
 
     // kind of using the DP idea, marking the step from destination to source
     // maybe a better way to do it is put the mark in place !

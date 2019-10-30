@@ -1,6 +1,6 @@
 package com.leetcode.solutions.dp;
 
-public class C91 {
+public class C91_decode_ways {
 
 
     // DP
@@ -30,6 +30,10 @@ public class C91 {
                 dp[1]=1;
             }
         }
+
+        // 304 is not a valid, since even 3 get 1, 30 doesn't so the array is [1, 0, ?]
+        // since 04 is not between 10 and 26,  third element only equal to second element, which is also 0, so [1, 0, 0]
+        // but if 300, then get [1, 0, 0], 260 get [1, 2, ?], since 0 doesn't form, and 60 is not between 26 and 10, hence [1, 2, 0], cannot decode actually
 
         // scan from left to right, the code is very neat
         for(int i=2; i<s.length(); i++){
@@ -84,7 +88,7 @@ public class C91 {
     }
 
     public static void main(String[] strings) {
-        C91 c = new C91();
+        C91_decode_ways c = new C91_decode_ways();
         System.out.println(c.numDecodings("227"));
     }
 }

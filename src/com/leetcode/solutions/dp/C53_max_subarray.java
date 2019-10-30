@@ -1,6 +1,6 @@
 package com.leetcode.solutions.dp;
 
-public class C53 {
+public class C53_max_subarray {
 
     //The changing condition for dynamic programming is "We should ignore the sum of the previous n-1 elements if nth element is greater than the sum."
 
@@ -31,7 +31,7 @@ public class C53 {
     }
 
     public static void main(String[] strings) {
-        C53 c = new C53();
+        C53_max_subarray c = new C53_max_subarray();
         int[] nums = new int[]{-2,1,-3,4,-1,2,1,-5,4};
         System.out.println(c.maxSubArray(nums));
     }

@@ -1,7 +1,35 @@
 package com.leetcode.solutions.pass;
 
-public class C63 {
+public class C63_unique_path_2 {
+
+    /*
+    Solution 1: use 1 d array to memorize the result
+    This is a typical 2D DP problem, we can store value in 2D DP array,
+    but since we only need to use value at dp[i - 1][j] and dp[i][j - 1] to update dp[i][j],
+    we don't need to store the whole 2D table, but instead store value in an 1D array,
+    and update data by using dp[j] = dp[j] + dp[j - 1],
+    (where here dp[j] corresponding to the dp[i - 1][j]) and dp[j - 1] corresponding to the dp[i][j - 1] in the 2D array)
+    fixme: the trick is just use 1 dimension, but keep updating it (only add), hence dp[j - 1] comes from left, previous row's value in place present comes from up
+     */
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        int width = obstacleGrid[0].length;
+        int[] dp = new int[width];
+        dp[0] = 1;
+        for (int[] row : obstacleGrid) {
+            for (int j = 0; j < width; j++) {
+                if (row[j] == 1)
+                    dp[j] = 0;
+                else if (j > 0)
+                    dp[j] += dp[j - 1];
+            }
+        }
+        return dp[width - 1];
+    }
+
+    /*
+    Solution 2: use 2 d array to remember, but it is easier to understand
+     */
+    public int uniquePathsWithObstacles_2(int[][] obstacleGrid) {
         if (obstacleGrid[0][0] == 1)
             return 0;
 
@@ -38,7 +66,7 @@ public class C63 {
     }
 
     public static void main(String[] strings) {
-        C63 c = new C63();
+        C63_unique_path_2 c = new C63_unique_path_2();
         int[] num1 = new int[]{0, 0};
         int[] num2 = new int[]{0, 0};
         int[][] nums = new int[][]{num1, num2};
