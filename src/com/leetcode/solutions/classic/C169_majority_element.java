@@ -1,11 +1,32 @@
-package com.leetcode.solutions.pass;
+package com.leetcode.solutions.classic;
 
 import java.util.Arrays;
 
 public class C169_majority_element {
 
-    // using a array is better than map on time wise and storage wise
+    /*
+    Solution 1, O(n)
+     */
     public int majorityElement(int[] num) {
+
+        int major=num[0], count = 1;
+        for(int i=1; i<num.length;i++){
+            if(count==0){
+                count++;
+                major=num[i];
+            }else if(major==num[i]){
+                count++;
+            }else count--;
+
+        }
+        return major;
+    }
+
+    /*
+    Solution 2, O(nlgn)
+     */
+    // using a array is better than map on time wise and storage wise
+    public int majorityElement_2(int[] num) {
         if(num.length==1){
             return num[0];
         }

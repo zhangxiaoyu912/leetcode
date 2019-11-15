@@ -1,5 +1,8 @@
 package com.leetcode.solutions;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 // a place just for note some Java basic data structure common API
@@ -15,6 +18,9 @@ public class Common {
         /**
          * Array
          */
+        int[][] intervals = new int[5][];
+        Arrays.sort(intervals, Comparator.comparing((int[] itv) -> itv[0]));// fixme: sort interval use Java8 style comparator
+
         char[][] temp = new char[5][]; // fixme: multi dimensions array only require length for first dimension
         char[] chars = Arrays.copyOf(temp[0], 5); // fixme: deep copy array content
 
@@ -22,8 +28,12 @@ public class Common {
         String[][] arra = new String[5][];
 
         String[] array2 = {"1", "2"};
-        System.out.println(array2.length); // fixme: String length has no (), array's length() has ()
+        System.out.println(array2.length); // fixme: String length has (), array's length() has no ()
 
+        int[][] A = new int[3][];
+        A[0] = new int[]{1, 1, 0};
+        A[1] = new int[]{0, 1, 1};
+        A[2] = new int[]{0, 0, 0};
         /**
          * List and ArrayList
          */
@@ -36,6 +46,8 @@ public class Common {
         // fixme: deep copy, deep copy can be apply to hashmap as well, the same way (in constructor)
         List<Integer> current = new ArrayList<>();
         List<Integer> temp1 = new ArrayList<>(current);
+
+        temp1.subList(0,1);// fixme: get the sub list of a list
 
         /**
          * Map and HashMap
@@ -53,6 +65,14 @@ public class Common {
         HashMap<Integer, String[]> m3 = new HashMap<Integer, String[]>(){{ put(1, array2); }};
 
         m3.containsKey(1);
+        for (Map.Entry<Integer, String[]> entry : m3.entrySet()) {// fixme: iterate entry set of a map
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        }
+
+        TreeMap<Integer,String> treeMap = new TreeMap<>();
+        Integer floor = treeMap.floorKey(1);// fixme: use treeMap to get get the latest element smaller than search key
+
 
         /**
          * PriorityQueue
@@ -88,6 +108,23 @@ public class Common {
 
         Set<Integer> set = new HashSet<>();
 //        set.contains()
+    }
+
+    static public void readFileLineByLine() {
+        BufferedReader reader;
+        try {
+            reader = new BufferedReader(new FileReader(
+                    "/Users/pankaj/Downloads/myfile.txt"));
+            String line = reader.readLine();
+            while (line != null) {
+                System.out.println(line);
+                // read next line
+                line = reader.readLine();
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     static public class TreeNode {

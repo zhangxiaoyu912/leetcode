@@ -89,6 +89,6 @@ public class C91_decode_ways {
 
     public static void main(String[] strings) {
         C91_decode_ways c = new C91_decode_ways();
-        System.out.println(c.numDecodings("227"));
+        System.out.println(c.numDecodings("307"));
     }
 }

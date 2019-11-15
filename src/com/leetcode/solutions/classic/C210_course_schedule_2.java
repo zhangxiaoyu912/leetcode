@@ -2,8 +2,11 @@ package com.leetcode.solutions.classic;
 
 import java.util.LinkedList;
 
-public class C210 {
+public class C210_course_schedule_2 {
 
+    /*
+    Solution 1: this is BFS solution, easy to understand
+     */
     // topological sort
     // https://www.youtube.com/watch?v=n_yl2a6n7nM
     public int[] findOrder(int numCourses, int[][] prerequisites) {
@@ -36,7 +39,7 @@ public class C210 {
             }
         }
 
-        int numNoPre = queue.size();
+        int numNoPre = queue.size();// fixme: the tricky place, to track the final course which are cleaned to be independent
 
         //initialize result
         int[] result = new int[numCourses];
@@ -60,7 +63,7 @@ public class C210 {
         }
 
         // return result
-        if(numNoPre==numCourses){// means all coursed complete
+        if(numNoPre==numCourses){// means all coursed complete fixme: means all number of course has clean dependency chain is equal to numCourses, means all clean
             return result;
         }else{
             return new int[0];

@@ -12,7 +12,7 @@ public class C227_basic_calculator_2 {
         char sign = '+';
         for(int i=0;i<len;i++){
             if(Character.isDigit(s.charAt(i))){
-                num = num*10+s.charAt(i)-'0';
+                num = num*10+s.charAt(i)-'0';// fixme: in line 31, if there is opt, then reset num to 0, num * 10 is for number with more than single digit
             }
             if((!Character.isDigit(s.charAt(i)) &&' '!=s.charAt(i)) || i==len-1){
                 if(sign=='-'){
@@ -22,12 +22,12 @@ public class C227_basic_calculator_2 {
                     stack.push(num);
                 }
                 if(sign=='*'){
-                    stack.push(stack.pop()*num);
+                    stack.push(stack.pop()*num);// fixme: think through the * and / here, kind of act after second number is available
                 }
                 if(sign=='/'){
                     stack.push(stack.pop()/num);
                 }
-                sign = s.charAt(i);
+                sign = s.charAt(i);// fixme: exchange sign here
                 num = 0;
             }
         }

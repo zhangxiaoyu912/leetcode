@@ -1,13 +1,38 @@
 package com.leetcode.solutions.classic;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public class C127_word_ladder {
+
+    /*
+    Solution 1: same as solution 2, BFS
+     */
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        Set<String> dict = new HashSet<>(wordList), vis = new HashSet<>();
+        Queue<String> q = new LinkedList<>();
+        q.offer(beginWord);
+        for (int len = 1; !q.isEmpty(); len++) {
+            for (int i = q.size(); i > 0; i--) {
+                String w = q.poll();
+                if (w.equals(endWord)) return len;
+
+                for (int j = 0; j < w.length(); j++) {
+                    char[] ch = w.toCharArray();
+                    for (char c = 'a'; c <= 'z'; c++) {
+                        if (c == w.charAt(j)) continue;
+                        ch[j] = c;
+                        String nb = String.valueOf(ch);
+                        if (dict.contains(nb) && vis.add(nb)) q.offer(nb);
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+
+    /*
+    Solution 2, has a class contains the length
+     */
     // this utility class can save lots of code to remember the level
     class WordNode{
         String word;
@@ -20,7 +45,7 @@ public class C127_word_ladder {
     }
 
     // a BFS solution make sure that the min step can be made
-    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+    public int ladderLength_2(String beginWord, String endWord, List<String> wordList) {
         Queue<WordNode> queue = new ArrayDeque<>();
         Set<String> set = new HashSet<>();
         for (String str : wordList)

@@ -3,7 +3,26 @@ package com.leetcode.solutions.classic;
 import java.util.HashMap;
 
 public class C205_isomorphic_strings {
-    public boolean isIsomorphic(String s, String t) {
+
+    /*
+    Solution 1, fixme: the neat code
+     */
+    public boolean isIsomorphic (String s, String t) {
+        int[] m1 = new int[256];
+        int[] m2 = new int[256];
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            if (m1[s.charAt(i)] != m2[t.charAt(i)]) return false;
+            m1[s.charAt(i)] = i + 1;
+            m2[t.charAt(i)] = i + 1;
+        }
+        return true;
+    }
+
+    /*
+    Solution 2, fixme: using the hashmap, it is traditional
+     */
+    public boolean isIsomorphic_2(String s, String t) {
         if (s == null && t == null)
             return true;
 

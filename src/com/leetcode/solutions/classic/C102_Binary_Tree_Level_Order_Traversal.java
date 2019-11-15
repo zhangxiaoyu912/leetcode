@@ -1,4 +1,4 @@
-package com.leetcode.solutions.pass;
+package com.leetcode.solutions.classic;
 
 import java.util.*;
 
@@ -19,7 +19,7 @@ import java.util.*;
  [15,7]
  ]
  */
-public class C102 {
+public class C102_Binary_Tree_Level_Order_Traversal {
 
     public class TreeNode {
         int val;
@@ -31,9 +31,31 @@ public class C102 {
         }
     }
 
+    /*
+    Solution 1: neat code, not using a queue, but DFS
+     */
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        levelHelper(res, root, 0);
+        return res;
+    }
+
+    public void levelHelper(List<List<Integer>> res, TreeNode root, int height) {
+        if (root == null) return;
+        if (height >= res.size()) {
+            res.add(new LinkedList<Integer>());
+        }
+        res.get(height).add(root.val);
+        levelHelper(res, root.left, height+1);
+        levelHelper(res, root.right, height+1);
+    }
+
+    /*
+    Solution 2, using a queue, BFS, lengthy to write on whiteboard
+     */
     // change list to queue will be better, for each level holding
     // so there will be only two queues, one of entire traverse, one for each level
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder_2(TreeNode root) {
         List<List<Integer>> results = new ArrayList<>();
         Queue<TreeNode> queue = new ArrayDeque<>();
         if (root == null)

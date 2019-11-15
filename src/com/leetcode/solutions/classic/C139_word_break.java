@@ -17,7 +17,7 @@ import java.util.Set;
  UPDATE (2017/1/4):
  The wordDict parameter had been changed to a list of strings (instead of a set of strings). Please reload the code definition to get the latest changes.
  */
-public class C139 {
+public class C139_word_break {
 
     // brute force way, works though
 //    public boolean wordBreak(String s, List<String> wordDict) {
@@ -92,7 +92,7 @@ public class C139 {
     }
 
     public static void main(String[] args) {
-        C139 problem = new C139();
+        C139_word_break problem = new C139_word_break();
         ArrayList<String> list = new ArrayList<String>() {{
             add("car");
             add("ca");
