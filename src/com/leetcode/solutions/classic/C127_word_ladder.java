@@ -12,12 +12,13 @@ public class C127_word_ladder {
         Queue<String> q = new LinkedList<>();
         q.offer(beginWord);
         for (int len = 1; !q.isEmpty(); len++) {
-            for (int i = q.size(); i > 0; i--) {
+            for (int i = q.size(); i > 0; i--) {// fixme: this way each time only process what has been offered to quene in last round
+                                                // fixme: use len to record number of step
                 String w = q.poll();
                 if (w.equals(endWord)) return len;
 
                 for (int j = 0; j < w.length(); j++) {
-                    char[] ch = w.toCharArray();
+                    char[] ch = w.toCharArray();// no StringBuilder as well
                     for (char c = 'a'; c <= 'z'; c++) {
                         if (c == w.charAt(j)) continue;
                         ch[j] = c;

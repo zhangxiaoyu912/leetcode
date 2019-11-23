@@ -105,6 +105,7 @@ public class Common {
          * Character
          */
         Character.isDigit('5'); // fixme: tell if a char is digit
+        Character.getNumericValue('5'); // fixme: char to int convert directly
 
         Set<Integer> set = new HashSet<>();
 //        set.contains()
